@@ -11,7 +11,7 @@ public class Mech {
 	
 	private static int side, ai=2, winnerIs, rnd, isBoardFull=0/*it is at isBoardFull==9*/;
 	
-	private static Boolean noWin=true, goEasyOnMe=true;
+	private static Boolean noWin=true;
 
 	public static int[][] box, boxCoords;
 	
@@ -205,6 +205,7 @@ public class Mech {
 				isBoardFull++;
 				checkWin();
 				if(noWin) {
+					Boolean goEasyOnMe=true;
 					// check for winning lines
 					for(int i=1; i<10; i++) {	// go through the starting positions and decide if expansion is necessary
 						// columns
